@@ -1,4 +1,5 @@
-"""Get the data from an UPC Connect Box."""
+#!/usr/bin/python -O
+# Get the data from an UPC Connect Box
 import asyncio
 from pprint import pprint
 import aiohttp
@@ -11,7 +12,6 @@ HOST        = 'compal.lan'
 ZBXSRV      = 'localhost'
 
 async def main():
-    """Sample code to retrieve the data from an UPC Connect Box."""
     async with aiohttp.ClientSession() as session:
         client = ConnectBox(session, PASSWORD, IP)
 
